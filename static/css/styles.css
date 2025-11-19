@@ -1,0 +1,186 @@
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background-color: #050816;
+    color: #f3f4f6;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    background: linear-gradient(90deg, #0f172a, #111827);
+    border-bottom: 1px solid #1f2937;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.login-panel {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.login-panel input {
+    padding: 6px 8px;
+    border-radius: 6px;
+    border: 1px solid #4b5563;
+    background-color: #020617;
+    color: #f9fafb;
+}
+
+.login-panel button {
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    background-color: #22c55e;
+    color: #022c22;
+    font-weight: 600;
+}
+
+.main-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 1.2fr 1fr;
+    gap: 16px;
+    padding: 16px;
+}
+
+.panel {
+    background-color: #020617;
+    border: 1px solid #1f2937;
+    border-radius: 12px;
+    padding: 12px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.panel h2 {
+    margin: 0 0 8px;
+    font-size: 18px;
+}
+
+.missions-panel {
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+#missions-list button {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 4px;
+    padding: 6px 8px;
+    border-radius: 8px;
+    border: 1px solid #1f2937;
+    background-color: #030712;
+    color: #e5e7eb;
+    cursor: pointer;
+}
+
+#missions-list button.active {
+    border-color: #22c55e;
+    background-color: #052e16;
+}
+
+.create-mission textarea,
+.create-mission input {
+    width: 100%;
+    margin-bottom: 4px;
+    padding: 6px 8px;
+    border-radius: 8px;
+    border: 1px solid #4b5563;
+    background-color: #030712;
+    color: #e5e7eb;
+}
+
+.create-mission button {
+    padding: 6px 12px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background-color: #3b82f6;
+    color: #eff6ff;
+    font-weight: 600;
+}
+
+.telemetry-values {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 16px;
+    font-size: 14px;
+}
+
+.telemetry-log {
+    margin-top: 8px;
+    max-height: 50vh;
+    overflow-y: auto;
+    font-size: 13px;
+}
+
+.telemetry-log ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.telemetry-log li {
+    padding: 4px 0;
+    border-bottom: 1px solid #111827;
+}
+
+.chat-panel {
+    max-height: 80vh;
+}
+
+.chat-messages {
+    flex: 1;
+    border-radius: 8px;
+    border: 1px solid #1f2937;
+    padding: 8px;
+    overflow-y: auto;
+    background-color: #020617;
+    font-size: 14px;
+}
+
+.chat-message {
+    margin-bottom: 6px;
+}
+
+.chat-message span.username {
+    font-weight: 600;
+    color: #22c55e;
+}
+
+.chat-message span.system {
+    color: #60a5fa;
+}
+
+.chat-input {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 6px 8px;
+    border-radius: 8px;
+    border: 1px solid #4b5563;
+    background-color: #030712;
+    color: #e5e7eb;
+}
+
+.chat-input button {
+    padding: 6px 12px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background-color: #f97316;
+    color: #111827;
+    font-weight: 600;
+}

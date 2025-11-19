@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>StarLaunch - Monitor de Misiones</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+</head>
+<body>
+<header class="header">
+    <h1>StarLaunch - Monitor de Misiones</h1>
+    <div class="login-panel">
+        <input id="username" type="text" placeholder="Nombre de operador">
+        <button id="btn-login">Iniciar sesión</button>
+        <span id="login-status"></span>
+    </div>
+</header>
+
+<main class="main-layout">
+    <section class="panel missions-panel">
+        <h2>Misiones</h2>
+        <div id="missions-list"></div>
+        <div id="mission-detail"></div>
+        <div class="create-mission">
+            <h3>Nueva misión</h3>
+            <input id="new-mission-name" type="text" placeholder="Nombre de misión">
+            <input id="new-mission-status" type="text" placeholder="Estado">
+            <textarea id="new-mission-plan" placeholder="Plan de vuelo"></textarea>
+            <button id="btn-create-mission">Crear misión</button>
+            <span id="create-mission-status"></span>
+        </div>
+    </section>
+
+    <section class="panel telemetry-panel">
+        <h2>Telemetría en vivo</h2>
+        <div class="telemetry-values">
+            <div>Altitud: <span id="telemetry-altitude">0</span> m</div>
+            <div>Velocidad: <span id="telemetry-velocity">0</span> m/s</div>
+            <div>Combustible: <span id="telemetry-fuel">0</span> %</div>
+            <div>Estado: <span id="telemetry-status">Sin datos</span></div>
+            <div>Última actualización: <span id="telemetry-timestamp">-</span></div>
+        </div>
+        <div class="telemetry-log">
+            <h3>Registro reciente</h3>
+            <ul id="telemetry-log-list"></ul>
+        </div>
+    </section>
+
+    <section class="panel chat-panel">
+        <h2>Sala Go/No-Go</h2>
+        <div id="chat-messages" class="chat-messages"></div>
+        <div class="chat-input">
+            <input id="chat-text" type="text" placeholder="Escribe un mensaje">
+            <button id="btn-send-chat">Enviar</button>
+        </div>
+    </section>
+</main>
+
+<script src="/static/js/main.js"></script>
+</body>
+</html>
